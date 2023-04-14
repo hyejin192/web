@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+*{padding: 0; margin: 0;}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none; /* 밑줄 빼기 */
+    color: #333;
+}
+
+/* ---------- warp ---------- */
+#wrap {
+    width: 1000px;
+    /* 블럭요소의 가운데 정렬 */
+    margin: 0 auto;
+}
+/* ---------- header ---------- */
+#header {}
+#header h1 {
+    float: left;
+    width: 110px;
+    padding-top: 15px;
+}
+#header h1 a {}
+#header h1 a img {
+    /* 인라인요소는 공간을 인식하지 않지만 예외 : img,button */
+    width: 100%;
+}
+#header .nav {
+    float: right;
+    margin-top: 20px;
+}
+#header .nav ul {}
+#header .nav ul li {
+    position: relative;
+    float: left;
+    width: 140px;
+    background-color: #ccc;
+    /* 자식 중에서 인라인요소는 가운데 정렬 */
+    text-align: center;
+    box-sizing: border-box; 
+}
+#header .nav ul li a {
+    display: block;
+    padding: 24px 20px 20px;
+    transition: 0.3s;
+}
+#header .nav ul li a:hover {
+    background-color: #8a8a8a;
+}
+#header .nav ul li .SubMenu {
+    display: none;
+    position: absolute;
+    left: 0; top: 65px;
+}
+#header .nav ul li .SubMenu li {}
+#header .nav ul li .SubMenu li a {
+    background-color: #888;
+    padding: 10px;
+    
+}
+#header .nav ul li .SubMenu li a:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+/* ---------- Banner ---------- */
+
