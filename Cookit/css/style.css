@@ -25,24 +25,23 @@ a {
 #header {}
 #header h1 {
     float: left;
-    width: 110px;
+    width: 140px;
     padding-top: 15px;
 }
-#header h1 a {}
 #header h1 a img {
     /* 인라인요소는 공간을 인식하지 않지만 예외 : img,button */
     width: 100%;
+    height: 50px;
 }
 #header .nav {
     float: right;
     margin-top: 20px;
 }
-#header .nav ul {}
 #header .nav ul li {
     position: relative;
     float: left;
     width: 140px;
-    background-color: #ccc;
+    background-color: #9ecf4f;
     /* 자식 중에서 인라인요소는 가운데 정렬 */
     text-align: center;
     box-sizing: border-box; 
@@ -51,25 +50,221 @@ a {
     display: block;
     padding: 24px 20px 20px;
     transition: 0.3s;
+    
 }
 #header .nav ul li a:hover {
-    background-color: #8a8a8a;
+    background-color: #e5e5e5;
 }
 #header .nav ul li .SubMenu {
     display: none;
     position: absolute;
     left: 0; top: 65px;
+    z-index: 1;
 }
-#header .nav ul li .SubMenu li {}
 #header .nav ul li .SubMenu li a {
-    background-color: #888;
+    background-color: #fff;
     padding: 10px;
-    
 }
 #header .nav ul li .SubMenu li a:hover {
-    background-color: #666;
-    color: #fff;
+    
+    color: navy;
+    text-decoration: underline;
 }
 
 /* ---------- Banner ---------- */
+#Banner {
+    overflow: hidden;
+}
+#Banner .SlideList{
+    width: 3000px;
+    /* animate 적용시 position 잡기 */
+    position: relative;
+}
+#Banner .SlideList .SlideImg {
+    position: relative;
+    float: left;
+    width: 1000px;
+}
+#Banner .SlideList .SlideImg h2 {
+    position: absolute;
+    padding: 10px 30px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+}
+#Banner .SlideList .SlideImg img {
+    width: 100%;
+    height: 400px;
+    /* img(인라인요소) 아래 쪽 빈틈 처리 방법 */
+    /* 1. display-block */
+    /* 2. vartical-align:top */
+    display: block;
+}
 
+/* ---------- content1 ---------- */
+#content1 {
+    margin-top: 20px;
+}
+#content1 .title {
+    font-size: 22px;
+    padding-bottom: 5px;
+}
+#content1 .desc {
+    font-size: 14px;
+    color: #666;
+    padding-bottom: 15px;
+}
+
+/* ----------------------------------- left*/
+#content1 .left {
+    float: left;
+    width: 49%;
+    /* background: color image repeat position/size; */
+    background: #f2f2f2 url(../img/bg1.jpg) no-repeat right 20px center/90px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#content1 .left .btn {
+    background: url(../img/icon1.jpg) no-repeat left center;
+    background-size: 20px;
+    /* padding 값을 아무리 줘도 이미지는 왼쪾에 붙어있음. */
+    padding-left: 25px;
+    font-weight: bold;
+}
+/* ----------------------------------- right*/
+#content1 .right {
+    float: right;
+    width: 49%;
+    /* background: color image repeat position/size; */
+    background: #f2f2f2 url(../img/bg2.jpg) no-repeat right 20px center;
+    background-size: 90px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#content1 .right .btn {
+    background: url(../img/icon2.jpg) no-repeat left center;
+    background-size: 20px;
+    padding-left: 25px;
+    font-weight: bold;
+}
+#content1 .right .btn em {}
+
+/* ---------- content2 ---------- */
+#content2 {
+    margin-top: 30px;
+}
+#content2 .Tab_Menu {}
+#content2 .Tab_Btn {}
+#content2 .Tab_Btn ul {
+}
+#content2 .Tab_Btn ul li {
+    float: left;
+    margin-right: 15px;
+}
+#content2 .Tab_Btn ul li a {
+    /* 인라인요소는 padding,margin 상하는 적용이 안됨 */
+    color: #999;
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    padding-bottom: 20px;
+}
+#content2 .Tab_Btn ul li.active a {
+    color: #000;
+}
+/* ----------------------------------- Tab_Cont */
+#content2 .Tab_Cont {}
+#content2 .Tab_Cont>div {
+    /* 자기 자신보다 넘치는 것은 숨겨버림
+    부모가 깨지는 것을 막아주지만, SubMenu는 마우스를 올렸을 때 나와야 되므로 clearfix 사용 */
+    overflow: hidden;
+}
+/* float으로 인해서 부모가 깨지는 현상 막기
+1. clear:both 처리하기
+2. overflow:hidden
+3. 강제로 부모에게 높이값 설정(다음 페이지와 연결하지 못함) */
+#content2 .Tab_Cont>div figure {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}
+#content2 .Tab_Cont>div figure:last-child {
+    margin-right: 0;
+}
+#content2 .Tab_Cont>div figure img {
+    width: 100%;
+}
+#content2 .Tab_Cont>div figure figcaption {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* ---------- footer ---------- */
+#footer {
+    overflow: hidden;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #202020;
+    height: 150px;
+}
+#footer h2 {
+    float: left;
+}
+#footer h2 img {
+    width: 150px;
+}
+#footer .foot {
+    float: right;
+    
+}
+#footer .foot ul {
+    padding-bottom: 10px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+#footer .foot ul li {
+    /* display: inline; */
+    padding : 0 30px;
+    float: right;
+}
+#footer .foot ul li a {
+    color: #fff;
+}
+#footer .foot ul li a:hover {
+    color: #9ecf4f;
+}
+#footer .foot address {
+    color: #ccc;
+    /* 기울림체 해제 */
+    font-style: normal;
+    padding-top: 10px;
+}
+
+/* ---------- Layer 팝업 ---------- */
+.Layer_bg {
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0; /* = width,height:100% ,화면가득채워짐 */
+    /* width: 500px; 일때 왼쪽을 기준으로 채워짐 */
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+.Layer_bg .Layer {
+    width: 500px; height: 500px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    padding: 20px;
+}
+.Layer_bg .Layer h2 {
+    font-size: 25px;
+}
+.Layer_bg .Layer a {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 20px;
+}
