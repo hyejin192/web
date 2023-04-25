@@ -1,0 +1,241 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* ---------------------------- header */
+header {}
+#header_Logo {
+    padding: 20px;
+}
+#header_Logo .Logo {
+    float: left;
+    width: 300px;
+}
+#header_Logo a img {
+    width: 100%;
+}
+#header_Logo nav {
+    float: right;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+#header_Logo nav ul li {
+    position: relative;
+    float: left;
+    width: 120px;
+    text-align: center;
+}
+#header_Logo nav ul li a {
+    padding: 10px 0;
+    display: block;
+    transition: 0.3s;
+}
+#header_Logo nav ul li a:hover {
+    background-color: #36f;
+    color: #fff;
+}
+#header_Logo nav ul li .SubMenu {
+    position: absolute;
+    left: 0; top: 41px;
+    background-color: rgba(255,255,255,0.8);
+    display: none;
+    z-index: 100;
+}
+#header_Logo nav ul li .SubMenu li {}
+#header_Logo nav ul li .SubMenu li a {
+    padding: 5px 0;
+    color: #000;
+    transition: 0.3s;
+}
+#header_Logo nav ul li .SubMenu li a:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+/* ---------------------------- ImgSlide */
+#ImgSlide {
+    position: relative;
+    /* 모든 자식이 absolute이므로 높이값을 따라갈 자식이 없음
+    강제로 높이값을 줘야 함 */
+    height: 400px;
+    overflow: hidden;
+}
+#ImgSlide #Imgs {
+    /* 자식이 float일 때 부모가 float이거나 부모의 position이 absolute,fixed이면 그 부모는 깨지지 않는다 */
+    position: absolute;
+    width: 5000px;
+}
+#ImgSlide #Imgs img {
+    float: left;
+}
+#ImgSlide #ImgsBar {
+    /* #Imgs 도 absolute지만 밑에 있는 자식이 더 우선순위 */
+    position: absolute;
+    left: 50%; top: 10px;
+    transform: translateX(-50%);
+}
+#ImgSlide #ImgsBar li {
+    float: left;    
+}
+#ImgSlide .Welcome {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    background-color: rgba(255,255,255,0.2);
+    /* padding-inline: 좌우패딩 */
+    /* padding-block: 상하패딩 */
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 20px;
+}
+
+/* ---------------------------- Content */
+#Content {
+    overflow: hidden;
+    margin-top: 30px; 
+    padding: 20px;
+}
+#Content .notice {
+    float: left;
+    width: 480px;
+}
+#Content .notice h2 {
+    color: #666;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#Content .notice table {
+   /* 기본 폰트 값 : 16px */
+   font-size: 1em; /* 1em = 16px */
+   /* 만약 부모의 폰트 사이즈가 14px이면 1em=14px */
+   /* 0.8em =  부모의 폰트사이즈(100%) 중 80%의 크기 */
+   font-size: 0.8em; /* 16px * 0.8 =12.8px */
+   border-collapse: collapse;  
+}
+#Content .notice table tr:nth-child(even) {
+    /* #Content .notice table tr:nth-child(2n or even) */
+    background-color: #ccc;
+}
+#Content .notice table tr td {
+    padding: 5px;
+    padding-top: 10px;
+}
+
+#Content .partner {
+    float: right;
+    width: 480px;
+}
+#Content .partner h2 {
+    color: #666;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#Content .partner .partner_info {}
+#Content .partner .partner_info img {
+    width: 100%; /* == width:480px */
+}
+/* ---------------------------- modal 팝업 */
+.modal {
+    position: fixed;
+    left: 0; top: 0; bottom: 0; right: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal .content {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+.modal .content img {
+    display: block;
+    margin: 0 auto;
+
+}
+.modal .content .close {
+    /* .close(a태그)는 인라인요소이기 때문에 margin,padding 상하가 적용안됨 */
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #999;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* ---------------------------- icon */
+#Content .icon {float: left;}
+#Content .icon .icons {}
+#Content .icon .icons .btn {
+    float: left;
+    width: 33.3333%;
+    /* padding-inline-start: ; == padding-left */
+    /* padding-inline-end: ; == padding-right */
+    padding-inline: 10px;
+    box-sizing: border-box;
+    /* 자식 중에서 인라인요소의 text를 center로 적용 */
+    text-align: center;
+}
+#Content .icon .icons .btn img {
+    width: 100%
+}
+#Content .icon .icons .btn button {
+    background-color: #999;
+    border: none; /* button 테두리 제거 */
+    padding: 10px; /* 인라인요소지만 크기를 설정할 수 있는 요소 : img,button */
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s;
+}
+#Content .icon .icons .btn button:hover {
+    background-color: #36f;
+}
+
+/* ---------------------------- footer */
+footer {
+    height: 100px;
+    background-color: #36f;
+    color: #fff;
+    padding: 10px 20px;
+}
+footer div {
+    overflow: hidden; /* 부모깨짐 현상 막음 */
+}
+footer div ul {
+    float: left;
+    width: 50%;
+}
+footer div ul li {
+    float: left; /* 부모에게도 float:left있으므로 깨지지 않음 */
+    margin-right: 20px;
+    margin-top: 10px;
+}
+footer div ul li a {
+    color: #fff;
+}
+footer div address {
+    float: left;
+    width: 50%;
+    font-style: normal; /* 글자 기울림체 제거 */
+    font-size: 12px;
+    line-height: 1.5;
+}

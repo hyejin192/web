@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <form action="#">
+      <table>
+         <tr>
+            <td>
+               <label for="name">이름 : </label>
+            </td>
+            <td>
+               <input type="text" id="name" name="text">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label for="email">이메일 :</label>
+            </td>
+            <td>
+               <input type="email" id="email" name="email">
+            </td>
+         </tr>
+         <tr>
+            <td>보내는 말씀 :</td>
+            <td>
+               <textarea name="message" cols="30" rows="5">메시지를 입력하세요</textarea>
+            </td>
+         </tr>
+         <tr>
+            <td>관심있는 사진 : </td>
+            <td>
+               <input type="text" name="photo" list="photo">
+               <datalist id="photo">
+                  <option value="풍경">풍경</option>
+                  <option value="인물">인물</option>
+                  <option value="사물">사물</option>
+               </datalist>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <input type="submit" value="완료">
+            </td>
+         </tr>
+      </table>
+   </form>
+</body>
+
+</html>
