@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>04. Shop</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+</head>
+
+<body>
+   <header>
+      <img src="images/menu_Icon_left.svg" alt="Menu_Icon_Left" class="Menu_Icon_Left">
+      <h2>Shop</h2>
+      <img src="images/menu_Icon_right.svg" alt="Menu_Icon_Right" class="Menu_Icon_Right">
+   </header>
+   <div class="Top_Product">
+      <img src="images/top_product_img.jpg" alt="Top_Product" class="Top_Product_Img">
+      <div class="Info">
+         <h2>T-shirt for Women</h2>
+         <div class="Desc">
+            <div class="price">$121.00</div>
+            <div class="rate">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+            </div>
+         </div>
+      </div>
+   </div><!-- Top_Product end -->
+   <div class="Shop_Product">
+      <div class="product_list swiper-wrapper">
+         <div class="swiper-slide">
+            <img src="images/shop_list_01_watch.jpg" alt="Wrist Watch">
+            <h3>Wrist Watch</h3>
+            <h4>$121.00</h4>
+         </div><!-- swiper-slide1 -->
+         <div class="swiper-slide">
+            <img src="images/shop_list_02_shoes.jpg" alt="Running Shoes">
+            <h3>Running Shoes</h3>
+            <h4>$127.99</h4>
+         </div><!-- swiper-slide2 -->
+         <div class="swiper-slide">
+            <img src="images/shop_list_03_shirts.jpg" alt="Women shirts">
+            <h3>Women shirts</h3>
+            <h4>$54.99</h4>
+         </div><!-- swiper-slide3 -->
+         <div class="swiper-slide">
+            <img src="images/shop_list_01_watch.jpg" alt="Wrist Watch">
+            <h3>Wrist Watch</h3>
+            <h4>$121.00</h4>
+         </div><!-- swiper-slide1 -->
+         <div class="swiper-slide">
+            <img src="images/shop_list_02_shoes.jpg" alt="Running Shoes">
+            <h3>Running Shoes</h3>
+            <h4>$127.99</h4>
+         </div><!-- swiper-slide2 -->
+         <div class="swiper-slide">
+            <img src="images/shop_list_03_shirts.jpg" alt="Women shirts">
+            <h3>Women shirts</h3>
+            <h4>$54.99</h4>
+         </div><!-- swiper-slide3 -->
+      </div><!-- Shop_Product end -->
+   </div><!-- Shop_Product(swiper) end -->
+
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <script>
+      const swiper = new Swiper('.Shop_Product', {
+         loop: true,
+         slidesPerView: 2.5, // 화면에 나오는 슬라이드 갯수
+         spaceBetween: 10, // 슬라이드 사이의 간격
+      });
+   </script>
+</body>
+
+</html>

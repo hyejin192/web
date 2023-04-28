@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06. Single Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <img src="./images/menu_Icon_left.svg" alt="menu_Icon_left" class="Menu_Icon_Left">
+        <h2>Product Details</h2>
+        <img src="./images/menu_Icon_right.svg" alt="menu_Icon_right" class="Menu_Icon_Right">
+    </header>
+    <div class="Main_Title">
+        <h3>Modern T_shirt for Women</h3>
+        <div class="f_star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+
+    <div class="Detail_cut">
+        <div class="slick-slide">
+            <img src="images/product_detail_01.jpg" alt="">
+        </div>
+        <div class="slick-slide">
+            <img src="images/product_detail_03.jpg" alt="">
+        </div>
+        <div class="slick-slide">
+            <img src="images/product_detail_01.jpg" alt="">
+        </div>
+        <div class="slick-slide">
+            <img src="images/product_detail_03.jpg" alt="">
+        </div>
+    </div><!-- Detail_cut end -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $('.Detail_cut').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 2,
+
+        });
+
+    </script>
+    
+
+</body>
+
+
+</html>

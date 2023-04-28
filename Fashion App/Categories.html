@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>05. Categories</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <header>
+      <img src="images/menu_Icon_left.svg" alt="Menu_Icon_Left" class="Menu_Icon_Left">
+      <h2>Shop Categories</h2>
+      <img src="images/menu_Icon_right.svg" alt="Menu_Icon_Right" class="Menu_Icon_Right">
+   </header>
+   <!-- Slider main container -->
+   <div class="Category_Slide">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide">
+            <img src="images/caterory_slide_01.jpg" alt="Slide01">
+         </div>
+         <div class="swiper-slide">
+            <img src="images/caterory_slide_02.jpg" alt="Slide02">
+         </div>
+         <div class="swiper-slide">
+            <img src="images/caterory_slide_03.jpg" alt="Slide03">
+         </div>
+         <div class="swiper-slide">
+            <img src="images/caterory_slide_04.jpg" alt="Slide04">
+         </div>
+      </div>
+      <div class="swiper-pagination"></div>
+   </div><!-- Category_Slide end -->
+
+   <ul class="Category_List Container">
+      <li>
+         <img src="images/category_product_01.jpg" alt="T-shirts">
+         <h3>T-shirts</h3>
+         <h4>2.5k styles</h4>
+      </li>
+      <li>
+         <img src="images/category_product_02.jpg" alt="Shoes">
+         <h3>Shoes</h3>
+         <h4>1.5k styles</h4>
+      </li>
+      <li>
+         <img src="images/category_product_03.jpg" alt="T-shirts">
+         <h3>T-shirts</h3>
+         <h4>2.5k styles</h4>
+      </li>
+      <li>
+         <img src="images/category_product_04.jpg" alt="T-shirts">
+         <h3>T-shirts</h3>
+         <h4>2.5k styles</h4>
+      </li>
+   </ul>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script>
+         const swiper = new Swiper('.Category_Slide', {
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+               el: '.Category_Slide .swiper-pagination',
+               clickable: true, // 슬라이드 바의 버튼을 누르면 넘어감
+            },
+         });
+      </script>
+</body>
+
+</html>
