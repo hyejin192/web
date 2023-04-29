@@ -12,36 +12,63 @@
 </head>
 
 <body>
-    <header>
-        <img src="./images/menu_Icon_left.svg" alt="menu_Icon_left" class="Menu_Icon_Left">
-        <h2>Product Details</h2>
-        <img src="./images/menu_Icon_right.svg" alt="menu_Icon_right" class="Menu_Icon_Right">
-    </header>
-    <div class="Main_Title">
-        <h3>Modern T_shirt for Women</h3>
-        <div class="f_star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+    <div class="Wrap">
+        <header>
+            <img src="./images/menu_Icon_left.svg" alt="menu_Icon_left" class="Menu_Icon_Left">
+            <h2>Product Details</h2>
+            <img src="./images/menu_Icon_right.svg" alt="menu_Icon_right" class="Menu_Icon_Right">
+        </header>
+        <div class="Main_Title">
+            <h3>Modern T_shirt for Women</h3>
+            <div class="f_star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
         </div>
+    
+        <div class="Detail_cut">
+            <div class="slick-slide">
+                <img src="images/product_detail_01.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="images/product_detail_03.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="images/product_detail_01.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="images/product_detail_03.jpg" alt="">
+            </div>
+        </div><!-- Detail_cut end -->
+
+        <div class="price">
+            <h3>$21.99</h3>
+            <p>Look stunning with this t-shirt. it’s<br>
+            comfortable and attractive</p>
+        </div>
+        <div class="info">
+            <ul>
+                <li class="color">
+                    <a href="#">colors
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                </li>
+                <li class="size">
+                    <a href="#">sizes
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="Container">
+            <input type="submit" value="Add to Cart" class="Btn">
+        </div>
+
     </div>
 
-    <div class="Detail_cut">
-        <div class="slick-slide">
-            <img src="images/product_detail_01.jpg" alt="">
-        </div>
-        <div class="slick-slide">
-            <img src="images/product_detail_03.jpg" alt="">
-        </div>
-        <div class="slick-slide">
-            <img src="images/product_detail_01.jpg" alt="">
-        </div>
-        <div class="slick-slide">
-            <img src="images/product_detail_03.jpg" alt="">
-        </div>
-    </div><!-- Detail_cut end -->
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -49,7 +76,8 @@
         $('.Detail_cut').slick({
             dots: true,
             infinite: true,
-            slidesToShow: 2,
+            slidesToShow: 1,
+            spaceBetween: 20
 
         });
 
